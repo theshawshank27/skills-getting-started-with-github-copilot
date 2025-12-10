@@ -76,14 +76,47 @@ section h3 {
 
 /* Styling for participant list */
 .activity-card ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
   margin-top: 10px;
 }
 
 .activity-card li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.activity-card li span {
+  flex: 1;
+}
+
+.delete-participant {
+  background-color: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-left: 0;
+  color: inherit;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+}
+
+.delete-participant:hover {
+  opacity: 0.7;
+  background-color: transparent !important;
 }
 
 .form-group {
@@ -105,7 +138,7 @@ section h3 {
   font-size: 16px;
 }
 
-button {
+button:not(.delete-participant) {
   background-color: #1a237e;
   color: white;
   border: none;
@@ -116,7 +149,7 @@ button {
   transition: background-color 0.2s;
 }
 
-button:hover {
+button:not(.delete-participant):hover {
   background-color: #3949ab;
 }
 
